@@ -10,17 +10,12 @@ export default function Main({movies, setSearch, getMovies}){
         <section className="movie-view">
             <h2>Movies</h2>
             {movies?.map((movie, index) => (
-                <Link key={index} to={movie?.imdbID.replace(/\s/g, "-").toLowerCase()}>
-                    <MovieCard 
+                    <MovieCard key={index} 
                     title={movie?.Title} 
                     poster={movie?.Poster} 
                     year={movie?.Year} 
-                    genre={movie?.Genre}
-                    director={movie?.Director}
-                    actors={movie?.Actors}
-                    awards={movie?.Awards}
+                    id={movie?.imdbID}
                     />
-                </Link>
             ))}
         </section>
         </>

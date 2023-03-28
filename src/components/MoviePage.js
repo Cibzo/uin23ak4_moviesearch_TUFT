@@ -16,7 +16,8 @@ export default function MoviePage(){
     useEffect(() => {
         getMovie()
     }, [slug])
-    
+
+    console.log(slug)
     return(
         <section>
             <h1>{movie?.Title}</h1>
@@ -29,6 +30,7 @@ export default function MoviePage(){
             <p>Country: {movie?.Country}</p>
             <p>Actors: {movie?.Actors}</p>
             <p>Director: {movie?.Director}</p>
+            <p>Awards: {movie?.Awards}</p>
         </section>
     )
 }
