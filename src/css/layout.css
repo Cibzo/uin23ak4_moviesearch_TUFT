@@ -43,3 +43,6 @@ main > article {
     border: 1px solid black;
     padding: 1rem;
 }
+img{
+    max-width: 300px;
+}
