@@ -1,12 +1,12 @@
 //7777import { Link } from "react-router-dom";
 import MovieCard from "./MovieCard";
-import Search from "./Search";
+import SearchResults from "./SearchResults";
 
 export default function Main({ movies, setSearch, getMovies }) {
   console.log(movies);
   return (
     <>
-      <Search setSearch={setSearch} getMovies={getMovies} />
+      <SearchResults setSearch={setSearch} getMovies={getMovies} />
       <section className="movie-view">
         <h2>Movie list:</h2>
         {movies?.map((movie, index) => (
